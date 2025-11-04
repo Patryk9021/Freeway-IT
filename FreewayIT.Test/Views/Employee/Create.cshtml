@@ -11,37 +11,48 @@
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Employee</legend>
+<fieldset>
+    <legend>Employee</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FirstName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FirstName)
-            @Html.ValidationMessageFor(model => model.FirstName)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FirstName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FirstName)
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.LastName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.LastName)
-            @Html.ValidationMessageFor(model => model.LastName)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.LastName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.LastName)
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CityID, "City")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("CityID", String.Empty)
-            @Html.ValidationMessageFor(model => model.CityID)
-        </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+    <div class="form-group">
+        @Html.LabelFor(model => model.BirthMonth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.BirthMonth, new { @class = "form-control", type = "number", min = "1", max = "12" })
+            @Html.ValidationMessageFor(model => model.BirthMonth, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.CityID, "City")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("CityID", String.Empty)
+        @Html.ValidationMessageFor(model => model.CityID)
+    </div>
+
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+</fieldset>
 }
 
 <div>
