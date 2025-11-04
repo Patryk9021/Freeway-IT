@@ -19,13 +19,13 @@
             @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            City
+            Birth Month
         </th>
         <th>
-        <th>Miesiąc urodzenia</th>
-        </th>
+        <th>City</th>
+       <td></td>
     </tr>
-
+    
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -38,7 +38,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.City.Name)
         </td>
-       
+       <td></td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.ID })
         </td>
