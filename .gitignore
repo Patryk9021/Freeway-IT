@@ -1,0 +1,15 @@
+# Ignoruj folder .vs (Visual Studio)
+.vs/
+
+# Ignoruj plik Web.config z katalogu FreewayIT.Test
+FreewayIT.Test/Web.config
+
+# Ignoruj ewentualne pliki konfiguracyjne użytkownika
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignoruj build output
+bin/
+obj/
