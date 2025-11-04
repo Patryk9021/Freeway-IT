@@ -21,7 +21,9 @@
         <th>
             City
         </th>
-        <th></th>
+        <th>
+        <th>Miesiąc urodzenia</th>
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -32,11 +34,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.LastName)
         </td>
+        <th>@Html.DisplayFor(modelItem => item.BirthMonth)</th>
         <td>
             @Html.DisplayFor(modelItem => item.City.Name)
         </td>
+       
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) 
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
         </td>
     </tr>
 }
